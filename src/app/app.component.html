@@ -1,0 +1,17 @@
+ <ul>
+  <li class="myy" [contextMenu]="itemContextMenu" [contextMenuSubject]="item">
+    kamlesh
+    <context-menu #itemContextMenu>
+      <ng-template contextMenuItem>
+        pehla menu
+      </ng-template>
+      <ng-template contextMenuItem [subMenu]="someSubMenu">
+        menu dkh
+      </ng-template>
+      <context-menu #someSubMenu>
+        <ng-template contextMenuItem>kya krna h kamlesh</ng-template>
+        <ng-template contextMenuItem>or kya rh gya</ng-template>
+      </context-menu>
+    </context-menu>
+  </li>
+</ul>
